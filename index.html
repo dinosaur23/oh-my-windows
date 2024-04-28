@@ -29,7 +29,7 @@ body {
   <button><a href="https://classroom.google.com/h">Classroom</a></button>
   <button disabled="">Gmail</button>      
 </div>
-      <button>The main 3 (General, literacy and Maths)</button>
+      <button><a href="#the-main-3">The main 3 (General, literacy and Maths)</a></button>
       <button>Others and extras</button>
 </div>
   </div>
@@ -48,5 +48,29 @@ body {
   <footer style="text-align: right">
     <button onclick="history.back()">Ok</button>
   </footer>
+</div>
+  <div class="window active" id="the-main-3" style="max-width: 300px">
+  <div class="title-bar">
+    <div class="title-bar-text">The main 3</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" onclick="history.back()"></button>
+    </div>
+  </div>
+  <div class="window-body has-space">
+    <section class="tabs">
+  <menu role="tablist" aria-label="Tabs Template">
+    <button role="tab" aria-controls="tab-A" aria-selected="false">Tab A</button>
+    <button role="tab" aria-controls="tab-B" aria-selected="true">Tab B</button>
+    <button role="tab" aria-controls="tab-C" aria-selected="false">Tab C</button>
+    <button role="tab" aria-controls="tab-D" disabled="" aria-selected="false">Tab D</button>
+  </menu>
+  <article role="tabpanel" id="tab-A" hidden="true">Tab A is active</article>
+  <article role="tabpanel" id="tab-B">Tab B is active</article>
+  <article role="tabpanel" id="tab-C" hidden="true">Tab C is active</article>
+  <article role="tabpanel" id="tab-D" hidden="true">Tab D is inactive</article>
+</section>
+  </div>
 </div>
 </body>
