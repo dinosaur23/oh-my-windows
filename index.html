@@ -5,6 +5,7 @@
   <style>
 body {
   background-image: url('https://wparena.com/wp-content/uploads/2009/09/img0.jpg');
+  background-repeat: no-repeat;
 }
 </style>
 <div class="window active" style="max-width: 300px">
@@ -17,11 +18,26 @@ body {
     </div>
   </div>
   <div class="window-body has-space">
-    <p>Hi welcome to my site</p>
+    <p>Hi welcome to my site <a href="#dialog-demo">more info</a></p>
     <div class="searchbox">
-  <input type="search" placeholder="Search">
+  <input type="search" placeholder="this don't work">
   <button aria-label="search"></button>
 </div>
   </div>
+</div>
+  <div class="window active is-bright" id="dialog-demo" role="dialog" aria-labelledby="dialog-title">
+  <div class="title-bar">
+    <div class="title-bar-text" id="dialog-title">Problem Diagnostics</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="history.back()"></button>
+    </div>
+  </div>
+  <div class="window-body has-space">
+    <h2 class="instruction instruction-primary">Identifying your problem...</h2>
+    <div role="progressbar" class="marquee"></div>
+  </div>
+  <footer style="text-align: right">
+    <button onclick="history.back()">Cancel</button>
+  </footer>
 </div>
 </body>
