@@ -82,11 +82,59 @@ body {
   </div>
   <div class="window-body has-space">
     <p> Others and extras</p>
-    <ul>
-      <li>Technologies</li>
-      <li>Languages & The Arts</li>
-      <li>Science</li>
-    </ul>
+    <section class="tabs" style="max-width: 500px">
+  <menu role="tablist" aria-label="Sample Tabs">
+    <button role="tab" aria-controls="tab-A" aria-selected="true">Instruction</button>
+    <button role="tab" aria-controls="tab-B" aria-selected="false">Example</button>
+    <button role="tab" aria-controls="tab-C" aria-selected="false">More instruction</button>
+    <button role="tab" aria-controls="tab-D" disabled="" aria-selected="false">Disabled Tab</button>
+  </menu>
+  <!-- the tab content -->
+  <article role="tabpanel" id="tab-A">
+    <h3>Creating tabs</h3>
+    <p>
+      To create a tab, use a <code>menu</code> element with <code>role="tablist"</code>.
+      Then for the tab titles, use a <code>button</code> with <code>role="tab"</code>, and set the <code>aria-controls</code> attribute to
+      the corresponding id of the element with <code>role="tabpanel"</code>.
+    </p>
+    <p>
+      Read more at <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role" target="_blank">MDN Web docs - ARIA: tab role</a>
+    </p>
+  </article>
+  <article role="tabpanel" id="tab-B" hidden="true">
+    <h3>More...</h3>
+    <p>This tab contains a GroupBox</p>
+    <fieldset>
+      <legend>Today's mood</legend>
+      <div class="field-row">
+        <input id="radio22" type="radio" name="fieldset-example2">
+        <label for="radio22">Claire Saffitz</label>
+      </div>
+      <div class="field-row">
+        <input id="radio23" type="radio" name="fieldset-example2">
+        <label for="radio23">Brad Leone</label>
+      </div>
+      <div class="field-row">
+        <input id="radio24" type="radio" name="fieldset-example2">
+        <label for="radio24">Chris Morocco</label>
+      </div>
+      <div class="field-row">
+        <input id="radio25" type="radio" name="fieldset-example2">
+        <label for="radio25">Carla Lalli Music</label>
+      </div>
+    </fieldset>
+  </article>
+  <article role="tabpanel" id="tab-C" hidden="true">
+    <h3>Disabling tabs</h3>
+    <p>Simply add a <code>disabled</code> attribute on the tab.</p>
+    <h3>Justified tabs</h3>
+    <p>Add the <code>justified</code> class to the <code>tablist</code> menu to make the tabs, well, justified.</p>
+  </article>
+  <article role="tabpanel" id="tab-D" hidden="true">
+    <h3>Disabled Tab</h3>
+    <p>This tab is disabled, so you should not be able to read this.</p>
+  </article>
+</section>
   </div>
   <div class="status-bar">
     <p class="status-bar-field">Press F25 for help</p>
